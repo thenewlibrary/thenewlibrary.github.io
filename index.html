@@ -55,6 +55,8 @@ iframe {
 <h1 id="ti">Welcome to the Library</h1>
 <div class="container checkerboard" style="width: 400px; overflow: auto;">
 <p>Testing...</p>
+<input id="s" placeholder="Type Game">
+<button onclick="gg()">Go</button>
 </div>
 </center>
 <script>
@@ -85,7 +87,9 @@ async function fetchUrl(targetUrl) {
   document.body.appendChild(gf);
 }
 
-fetchUrl('https://raw.githubusercontent.com/thegportal/thegportal.github.io/main/ghrb/g/rooftop-snipers-2/index.html')
+function gg() {
+  fetchUrl(`https://raw.githubusercontent.com/thegportal/thegportal.github.io/main/ghrb/g/${document.getElementById('s').value}/index.html`);
+}
 </script>
 </body>
 </html>
